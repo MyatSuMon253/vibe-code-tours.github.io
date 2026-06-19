@@ -17,6 +17,13 @@ const { name, github, role, skills, repo, x, linkedin, website, certs } =
 import { certProgressList } from "../lib/certs.mjs";
 const certList = certProgressList(certs); // earned (amber) + next 2 unearned (grey)
 const hasCert = certList.some((c) => c.earned);
+import { levelOf, levelMeta } from "../lib/levels.mjs";
+const level = levelOf(github); // highest passed chapter (0..8) or null — from progression DB
+const lvl = levelMeta(level);
+// Level border + glow, derived purely from Discord-verified progress (not self-declared).
+const lvlStyle = lvl
+  ? `border-color:${lvl.color};box-shadow:0 0 0 1px ${lvl.color}33,0 0 14px ${lvl.color}40`
+  : undefined;
 
 const avatar = `https://github.com/${github}.png?size=160`;
 const roleClass =
@@ -59,6 +66,7 @@ const links = [
   <article
     tabindex="0"
     aria-label={`${name}, ${role}`}
+    style={lvlStyle}
     class:list={[
       "card flex cursor-pointer flex-col outline-none transition-shadow duration-200",
       "group-hover:absolute group-hover:inset-x-0 group-hover:top-0 group-hover:z-30",
@@ -89,8 +97,20 @@ const links = [
           @{github}
         </a>
       </div>
+      {
+        lvl && (
+          <span
+            class="lvl-badge ml-auto shrink-0"
+            style={`color:${lvl.color};border-color:${lvl.color}55;background:${lvl.color}14`}
+            title={`${lvl.label} reached`}
+            aria-label={`Level: ${lvl.label}`}
+          >
+            {level}
+          </span>
+        )
+      }
       <span
-        class:list={["tier", roleClass, "ml-auto shrink-0"]}
+        class:list={["tier", roleClass, "shrink-0", !lvl && "ml-auto"]}
         title={role}
         aria-label={`Role: ${role}`}
       >
