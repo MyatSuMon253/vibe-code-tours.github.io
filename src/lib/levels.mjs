@@ -7,21 +7,23 @@
 // keyed by lowercased GitHub login. Students cannot forge their level.
 //
 // src/data/levels.json shape: { "<github-login-lowercased>": <0..8> }
+// Stored value = highest chapter PASSED (0..8). Displayed LEVEL = value + 1,
+// so ch-0-done -> Level 1, ch-3-done -> Level 4, ch-8-done -> Level 9.
 
 import levelData from "../data/levels.json";
 
-// level -> { label, color }. color drives the card border + glow.
-// ch-0 = setup done (neutral) ... ch-8 = top (gold).
+// chapter-index (0..8) -> { label, color }. color drives the card border + glow.
+// label is the player-facing LEVEL (chapter + 1): ch-0 done = Level 1 ... ch-8 done = Level 9.
 export const LEVELS = {
-  0: { label: "Ch 0", color: "#94a3b8" }, // slate
-  1: { label: "Ch 1", color: "#34d399" }, // emerald
-  2: { label: "Ch 2", color: "#2dd4bf" }, // teal
-  3: { label: "Ch 3", color: "#22d3ee" }, // cyan
-  4: { label: "Ch 4", color: "#38bdf8" }, // sky
-  5: { label: "Ch 5", color: "#818cf8" }, // indigo
-  6: { label: "Ch 6", color: "#a78bfa" }, // violet
-  7: { label: "Ch 7", color: "#e879f9" }, // fuchsia
-  8: { label: "Ch 8", color: "#f59e0b" }, // amber / gold
+  0: { label: "Level 1", color: "#94a3b8" }, // slate
+  1: { label: "Level 2", color: "#34d399" }, // emerald
+  2: { label: "Level 3", color: "#2dd4bf" }, // teal
+  3: { label: "Level 4", color: "#22d3ee" }, // cyan
+  4: { label: "Level 5", color: "#38bdf8" }, // sky
+  5: { label: "Level 6", color: "#818cf8" }, // indigo
+  6: { label: "Level 7", color: "#a78bfa" }, // violet
+  7: { label: "Level 8", color: "#e879f9" }, // fuchsia
+  8: { label: "Level 9", color: "#f59e0b" }, // amber / gold
 };
 
 export const MAX_LEVEL = 8;

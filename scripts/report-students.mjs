@@ -140,10 +140,10 @@ for (const p of leaderboard)
   console.log(`  ${lpad(p.certs.length, 2)}  ${pad(p.gh, 24)} ${p.name}`);
 
 console.log("");
-console.log("Levels (highest chapter passed)");
+console.log("Levels (Level = highest chapter passed + 1)");
 line();
 const maxL = Math.max(0, ...Object.keys(perLevel).map(Number));
 for (let l = 0; l <= maxL; l++)
-  console.log(`  ch-${l}  ${lpad(perLevel[l] || 0, 4)}`);
+  console.log(`  Level ${l + 1}  (ch-${l})  ${lpad(perLevel[l] || 0, 4)}`);
 console.log(`  ${pad("leveled total", 6)} ${lpad(leveled, 2)}`);
 console.log(`  builder cards with no passed level: ${cardsNoLevel}`);

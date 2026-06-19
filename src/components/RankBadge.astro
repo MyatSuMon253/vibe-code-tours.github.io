@@ -1,9 +1,9 @@
 ---
-// Military-style rank insignia for chapter level (ch-0..ch-8).
+// Military-style rank insignia for chapter level (ch-0..ch-8 = Level 1..9).
 // Tiers by metal: 0 steel · 1-3 silver (chevrons) · 4-6 gold+wings (stars) ·
 // 7-8 amethyst+wings (stars). Pure SVG — scalable, themeable, no raster assets.
 interface Props {
-  level: number; // 0..8
+  level: number; // chapter index 0..8; displayed as Level (level + 1)
   size?: number; // px, default 44
   title?: string;
 }
@@ -101,7 +101,7 @@ const rivets = [
   height={size}
   viewBox="-10 4 140 122"
   role="img"
-  aria-label={title ?? `Chapter ${lv} rank`}
+  aria-label={title ?? `Level ${lv + 1}`}
   class="rank-badge"
   data-wings={tier.wings ? "" : undefined}
 >
