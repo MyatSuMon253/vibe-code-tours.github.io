@@ -476,10 +476,10 @@
     "github": "furryforwhat",
     "name": "furryforwhat",
     "title": "EazyPortfolio",
-    "desc": "An agent pipeline that turns commit history into a portfolio",
+    "desc": "",
     "repo_url": "https://github.com/FurryForWhat/EazyPortfolio",
-    "live_url": "https://eazy-portfolio-rho.vercel.app/",
-    "slides_raw": "https://raw.githubusercontent.com/FurryForWhat/EazyPortfolio/main/slides/intro.md",
+    "live_url": "https://eazy-portfolio-eight.vercel.app",
+    "slides_raw": "https://raw.githubusercontent.com/FurryForWhat/EazyPortfolio/main/slides/tech-stack.md",
     "slides_base": "https://raw.githubusercontent.com/FurryForWhat/EazyPortfolio/main/slides/",
     "screenshot_url": "https://raw.githubusercontent.com/FurryForWhat/EazyPortfolio/main/slides/screenshots/01.png",
     "screenshots": [
@@ -493,7 +493,7 @@
       "JavaScript",
       "HTML"
     ],
-    "chapter": 4,
+    "chapter": 5,
     "team": 2
   },
   {
