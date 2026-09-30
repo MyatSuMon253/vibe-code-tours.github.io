@@ -485,7 +485,14 @@
     "screenshots": [
       "https://raw.githubusercontent.com/FurryForWhat/EazyPortfolio/main/slides/screenshots/01.png",
       "https://raw.githubusercontent.com/FurryForWhat/EazyPortfolio/main/slides/screenshots/02.png",
-      "https://raw.githubusercontent.com/FurryForWhat/EazyPortfolio/main/slides/screenshots/03.png"
+      "https://raw.githubusercontent.com/FurryForWhat/EazyPortfolio/main/slides/screenshots/03.png",
+      "https://raw.githubusercontent.com/FurryForWhat/EazyPortfolio/main/screenshots/05-landing-mobile.png",
+      "https://raw.githubusercontent.com/FurryForWhat/EazyPortfolio/main/screenshots/01-landing-desktop.png",
+      "https://raw.githubusercontent.com/FurryForWhat/EazyPortfolio/main/screenshots/04-progress-desktop.png",
+      "https://raw.githubusercontent.com/FurryForWhat/EazyPortfolio/main/screenshots/06-portfolio-mobile.png",
+      "https://raw.githubusercontent.com/FurryForWhat/EazyPortfolio/main/screenshots/07-dashboard-mobile.png",
+      "https://raw.githubusercontent.com/FurryForWhat/EazyPortfolio/main/screenshots/02-portfolio-desktop.png",
+      "https://raw.githubusercontent.com/FurryForWhat/EazyPortfolio/main/screenshots/03-dashboard-desktop.png"
     ],
     "type": "web-app",
     "stack": [
